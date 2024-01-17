@@ -1,0 +1,10 @@
+@api = http://localhost:6009/api/auth
+
+### Signin
+POST {{api}}/signin
+Content-Type: application/json
+
+{
+  "telefono": "3116347712",
+  "password": "310712"
+}
