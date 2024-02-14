@@ -5,6 +5,9 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
 
+//config
+import { PORT } from "./config.js";
+
 // Routes
 import indexRoutes from "./routes/index.routes.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -20,7 +23,7 @@ const app = express();
 app.use(cookieParser());
 
 // Settings
-app.set("port", process.env.PORT || 6009);
+app.set("port", PORT || 6009);
 app.set("json spaces", 4);
 
 // Middlewares
